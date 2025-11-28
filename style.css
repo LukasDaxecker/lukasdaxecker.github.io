@@ -1,101 +1,173 @@
+/* style.css - Cayman Theme Integration */
+
+/* 1. Import Cayman's Font (Open Sans) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* 2. Base Resets */
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    color: #333; 
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px; /* Cayman standard size */
     line-height: 1.6;
+    color: #606c71; /* Cayman text grey */
     background-color: #ffffff;
 }
 
-.container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
+/* 3. The Cayman Gradient Header */
+.hero-header {
+    background-image: linear-gradient(120deg, #155799, #159957); /* The signature gradient */
+    color: white;
+    padding: 2rem 2rem; /* Reduced padding for mobile, creates that 'banner' look */
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-.hero-header {
-    background-color: #192A56; 
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Mobile responsive adjustment for header */
+@media screen and (min-width: 64em) {
+    .hero-header {
+        padding: 5rem 6rem;
+    }
 }
 
 .hero-header h1 {
-    font-size: 2.8em;
-    margin-bottom: 5px;
-    font-weight: 900; 
+    font-size: 2rem;
+    margin-bottom: 0.1em;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+@media screen and (min-width: 42em) {
+    .hero-header h1 {
+        font-size: 3.5rem;
+    }
 }
 
 .hero-header p {
-    font-size: 1.2em;
-    opacity: 0.85; 
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0;
 }
 
+/* Header Links (like 'Übersicht') */
 .hero-header a {
-    font-size: 1.2em;
-    color: white;
-    opacity: 0.85; 
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.hero-header a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-color: #fff;
+    text-decoration: none;
+}
+
+/* 4. Layout Container */
+.container {
+    max-width: 64rem; /* Cayman uses approx 900-1024px width */
+    margin: 0 auto;
+    padding: 0 2rem 4rem 2rem; /* Bottom padding for breathing room */
+}
+
+/* 5. Typography & Headings */
+h2, h3, h4, h5, h6 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #159957; /* Using the Cayman green for headings */
 }
 
 h2 {
-    font-size: 1.8em;
-    font-weight: 700;
-    margin-top: 35px;
-    margin-bottom: 15px;
-    color: #192A56;
-    border-bottom: 2px solid #e0e0e0; 
-    padding-bottom: 5px;
+    font-size: 1.75rem;
+    border-bottom: 1px solid #eff0f1; /* Subtle divider */
+    padding-bottom: 0.3rem;
 }
 
-.blue-background {
-    background-color: #F0F8FF;
-    padding: 25px;
-    border-radius: 8px;
-    margin-bottom: 40px;
-    border: 1px solid #e0e0e0;
+h3 {
+    font-size: 1.5rem;
+    color: #1e6bb8; /* Slightly blue for subheadings to differentiate */
 }
 
-.blue-background h2 {
-    color: #192A56;
-    border-bottom: 1px solid #c0c0c0; 
-    margin-top: 0;
-    padding-bottom: 10px;
+/* 6. Links */
+a {
+    color: #1e6bb8;
+    text-decoration: none;
 }
 
-code {
-    background-color: #F0F8FF;
+a:hover {
+    text-decoration: underline;
 }
 
+/* 7. Lists */
 ul {
-    list-style-type: none; 
-    padding-left: 0;
+    padding-left: 20px;
     margin-bottom: 20px;
 }
 
 ul li {
-    padding: 5px 0;
+    padding: 2px 0;
 }
 
-a {
-    color: #1750AC; 
-    text-decoration: none; 
-    font-weight: 500;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
+/* 8. Code Snippets (Crucial for a tech site) */
+code {
+    background-color: #f3f6fa;
+    color: #333;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 85%;
 }
 
-a:hover {
-    color: #0056b3;
-    text-decoration: underline; 
+/* Preformatting for multi-line code blocks */
+p code.language-python {
+    display: block;
+    background-color: #f3f6fa;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    white-space: pre-wrap; /* Ensures line breaks are respected */
+    margin: 1rem 0;
+    border: 1px solid #e0e0e0;
+}
+
+/* 9. The 'Blue Background' Box (Table of Contents) */
+/* Adapted to fit Cayman style - lighter and cleaner */
+.blue-background {
+    background-color: #f3f6fa;
+    padding: 1.5rem;
+    border-radius: 0.3rem;
+    margin-bottom: 2rem;
+    border: 1px solid #e0e0e0;
+}
+
+.blue-background h2 {
+    color: #155799; /* Darker blue for contrast */
+    margin-top: 0;
+    border-bottom: 1px solid #d0d0d0;
+    font-size: 1.5rem;
+}
+
+.blue-background ul {
+    list-style-type: none; /* No bullets for TOC */
+    padding-left: 0;
+}
+
+.blue-background ul ul {
+    padding-left: 1.5rem; /* Indent sub-items */
 }
 
 hr {
-    border: none;
-    border-top: 1px solid #e0e0e0;
-    margin: 40px 0;
+    height: 1px;
+    border: 0;
+    background-color: #eff0f1;
+    margin: 2rem 0;
 }

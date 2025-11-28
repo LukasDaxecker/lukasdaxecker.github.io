@@ -10,9 +10,9 @@
 
     <header class="hero-header">
         <div class="header-content">
-            <a href="index.html">Übersicht</a>
+            <a href="index.html" class="btn">Übersicht</a>
             <h1>Techniktage 2025</h1>
-            <p>Coding Academy<p>
+            <p>Coding Academy</p>
         </div>
     </header>
 
@@ -27,223 +27,183 @@
                     <li><a href="#pyio">Aus- und Eingabe</a></li>
                     <li><a href="#pycommand">Kommentare</a></li>
                     <li><a href="#pyaufgabe1">Aufgabe 1 - Alter und Name</a></li>
-                    <li><a href="#pyifelse">If-Else Bediengung</a></li>
+                    <li><a href="#pyifelse">If-Else Bedingung</a></li>
                     <li><a href="#pyaufgabe2">Aufgabe 2 - Erwachsen</a></li>
                     <li><a href="#elifandor">elif, and, or</a></li>
                     <li><a href="#pyrandnum">Zufällige Zahlen</a></li>
-                    <li><a href="#pyaufgabe3">Aufgabe 3 - Zahlen Rate Spiel I</a></li>
+                    <li><a href="#pyaufgabe3">Aufgabe 3 - Zahlen raten I</a></li>
                     <li><a href="#pyloop">Schleifen</a></li>
                     <li><a href="#pyaufgabe4">Aufgabe 4 - Schleifen</a></li>
-                    <li><a href="#pyaufgabe5">Aufgabe 5 - Zahlen Rate Spiel II</a></li>
-                    <li><a href="#pyaufgabe6">Aufgabe 6 - Zahlen Rate Spiel III</a></li>
+                    <li><a href="#pyaufgabe5">Aufgabe 5 - Zahlen raten II</a></li>
+                    <li><a href="#pyaufgabe6">Aufgabe 6 - Zahlen raten III</a></li>
                 </ul>
             </ul> 
         </div>
          
         <div id="chapters">
             <h2 id="einleitung">Einleitung</h2>
+            <p>Willkommen zur Coding Academy.</p>
 
-            
-
-            <hr>
             <h2 id="python">Python</h2>
 
             <h3 id="pyvars">Variablen</h3>
             
             <p>Datentypen: int, bool, float, string, char, ...</p>
             
-            <p><code class="language-python">
-                alter = 20 <br>
-                name = "Lukas"
-            </code><p>
+            <p>
+                <code class="language-python">
+alter = 20
+name = "Lukas"
+                </code>
+            </p>
 
-            <p>Regeln: Symbole a-z,A-Z,0-9 und _. Es dürfen keine Zahlen am Beginn des Namen stehen und manche wörter (if, for, while, können nicht verwendet werden)</p>
-            <p>Außerdem sind zum Beispiel <code>alter</code> und <code>Alter</code> unterschiedliche Variablen.
+            <p>Regeln: Symbole a-z, A-Z, 0-9 und _. Es dürfen keine Zahlen am Beginn des Namens stehen und manche Wörter (if, for, while) können nicht verwendet werden.</p>
+            <p>Außerdem sind zum Beispiel <code>alter</code> und <code>Alter</code> unterschiedliche Variablen.</p>
 
             <h3 id="pyio">Aus- Eingabe</h3>
 
-            print, input 
+            <p>print, input</p>
 
-            print("Hello World")
-            name = input("Bitte gib deinen namen ein: ")
+            <p>
+                <code class="language-python">
+print("Hello World")
+name = input("Bitte gib deinen Namen ein: ")
 
-            type conversion
-
-            print(name)
-            print("Dein name ist {name}")
-
+# Type conversion
+print(name)
+print(f"Dein Name ist {name}")
+                </code>
+            </p>
 
             <h3 id="pycommand">Kommentare</h3>
 
-            # Einzeilig
+            <p>
+                <code class="language-python">
+# Einzeilig
 
-            Mehrzeilig
-            """
-            """
-            '''
-            '''
+"""
+Mehrzeilig
+"""
+                </code>
+            </p>
 
             <h3 id="pyaufgabe1">Aufgabe 1 - Alter und Name</h3>
 
-            Eingabe:
-            Gib deinen Namen ein: 
-            Gib dein Alter ein: 
+            <p><strong>Eingabe:</strong><br>
+            Gib deinen Namen ein:<br>
+            Gib dein Alter ein:</p>
 
-            Ausgabe:
-            Hallo, Lukas du bist 20
+            <p><strong>Ausgabe:</strong><br>
+            Hallo, Lukas du bist 20</p>
 
-            Lösung: 
-            name = input("Gib deinen Namen ein: ")
-            alter = input("Gib dein Alter ein: ")
-            print("Hallo {name}, du bist {alter} Jahre alter")
+            <p><strong>Lösung:</strong></p>
+            <p>
+                <code class="language-python">
+name = input("Gib deinen Namen ein: ")
+alter = input("Gib dein Alter ein: ")
+print(f"Hallo {name}, du bist {alter} Jahre alt")
+                </code>
+            </p>
 
+            <h3 id="pyifelse">If-Else Bedingung</h3>
 
+            <p>Zwei oder mehrere Dinge unterscheiden.</p>
+            <p>Operatoren: <code>==</code>, <code>!=</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&gt;</code></p>
 
-            <h3 id="pyifelse">If-Else Bediengung</h3>
+            <p>Beispiel:</p>
+            <p>
+                <code class="language-python">
+if 10 == 10:
+    print("Hi")
 
-            Zwei oder mehrere Dinge unterscheiden
-
-            Operatoren => ==, |=, <=, >=, <,>
-
-            bsp
-            if 10 == 10:
-                print("Hi")
-
-            name = input("Gib deinen Namen ein: ")
-            if x == "Lukas":
-                print("Du heißt Lukas")
-            else
-                print("Du heißt nicht Lukas")
-
-
+name = input("Gib deinen Namen ein: ")
+if name == "Lukas":
+    print("Du heißt Lukas")
+else:
+    print("Du heißt nicht Lukas")
+                </code>
+            </p>
 
             <h3 id="pyaufgabe2">Aufgabe 2 - Erwachsen</h3>
-
-            Eingabe:
-            Gib dein alter ein:
-
-            Ausgabe:
-            Du bist Erwachsen
-            oder 
-            Du bist nicht Erwachsen
-
-            Lösung:
-            alter = input("Gib dein alter ein: ")
-            if alter >= 18:
-                print("Du bist Erwachsen")
-            else 
-                print("Du bist nicht Erwachsen")
-
+            <p>
+                <code class="language-python">
+alter = int(input("Gib dein Alter ein: "))
+if alter >= 18:
+    print("Du bist Erwachsen")
+else:
+    print("Du bist nicht Erwachsen")
+                </code>
+            </p>
 
             <h3 id="elifandor">elif, and, or</h3>
+            <p>
+                <code class="language-python">
+alter = int(input("Gib dein Alter ein: "))
+if alter >= 13 and alter <= 19:
+    print("Du bist ein Teenager")
+else:
+    print("Du bist kein Teenager")
+                </code>
+            </p>
 
-            If verbinden <code> =<  </code>and,or 
+            <h3 id="pyrandnum">Zufällige Zahlen</h3>
+            <p>
+                <code class="language-python">
+import random
+# random.randint(untergrenze, obergrenze)
+zahl = random.randint(1,100)
+                </code>
+            </p>
 
-            bsp
-            alter = input("Gib dein alter ein: ")
-            if alter >= 13 and alter <= 19:
-                print("Du bist ein Teenager")
-            else
-                print("Du bist kein Teenager")
+            <h3 id="pyaufgabe3">Aufgabe 3 - Zahlen raten I</h3>
+            <p>
+                <code class="language-python">
+import random
 
+zahl = random.randint(1,10)
+geraten = int(input("Gib eine Zahl ein: "))
 
-            elif 
-
-            bsp
-            if health == 100:
-                print("Full HP")
-            elif health > 50:
-                print("Health HP")
-            else
-                print("Low health Points")
-
-
-
-            <h3 id="pyrandnum">Zufällig Zahlen</h3>
-
-            import random
-
-            random.randint(untergrenze, obergränze)
-
-            zahl = random.randint(1,100)
-
-
-            <h3 id="pyaufgabe3">Aufgabe 3 - Zahlen Rate Spiel I</h3>
-
-            Aufgabe:
-            Es wird eine Zahl generiert und Nutzer muss diese erraten
-
-            Eingabe:
-            Gib eine Zahl ein:
-
-            Ausgabe:
-            Du hast die Zahl erraten
-            oder
-            Du hast die Zahl nicht erraten. Die Zahl war x
-
-            lösung:
-
-            import random
-
-            zahl = random.randint(1,10)
-            geraten = input("Gib eine Zahl ein: ")
-
-            if zahl == geraten:
-                print("Du hast die Zahl erraten")
-            else
-                print("Du hast die Zahl nicht erraten. Die Zahl war zahl")
-
-
+if zahl == geraten:
+    print("Du hast die Zahl erraten")
+else:
+    print(f"Du hast die Zahl nicht erraten. Die Zahl war {zahl}")
+                </code>
+            </p>
 
             <h3 id="pyloop">Schleifen</h3>
-
-            while, for
-
-            bsp.
-            zaehler = 0
-            while zaehler < 3:
-                print("Hallo")
-                zaehler = zaehler + 1
-
-
-
+            <p>
+                <code class="language-python">
+zaehler = 0
+while zaehler < 3:
+    print("Hallo")
+    zaehler = zaehler + 1
+                </code>
+            </p>
+            
             <h3 id="pyaufgabe4">Aufgabe 4 - Schleifen</h3>
+            <p>
+                <code class="language-python">
+wiederholungen = int(input("Gib die Anzahl der Wiederholungen an: "))
+wort = input("Gib ein Wort ein: ")
 
-            Nutzer gibt zahl und wort an. 
+zaehler = 0
+while zaehler < wiederholungen:
+    print(wort)
+    zaehler = zaehler + 1
+                </code>
+            </p>
 
-            Eingabe:
-            Gibt die Anzahl der Wiederholungen an
-            Gib ein Wort ein
+            <h3 id="pyaufgabe5">Aufgabe 5 - Zahlen raten II</h3>
+            <p>Erweitern auf 3 mal raten.</p>
 
-            Ausgabe:
-            Hallo
-            Hallo
-            Hallo
-
-            Löse:
-            wiederholungen = input("Gibt die Anzahl der Wiederholungen an")
-            wort = input("Gib ein Wort ein")
-
-            zaehler = 0
-            while zaehler < wiederholungen:
-                print(wort)
-
-
-
-            <h3 id="pyaufgabe5">Aufgabe 5 - Zahlen Rate Spiel II</h3>
-
-Erweitern auf 3 mal raten
-
-            <h3 id="pyaufgabe6">Aufgabe 6 - Zahlen Rate Spiel III</h3>
-
-Erweitern auf hinweis höher oder tiefer
-
-            <hr>
+            <h3 id="pyaufgabe6">Aufgabe 6 - Zahlen raten III</h3>
+            <p>Erweitern auf Hinweis: höher oder tiefer.</p>
         </div>
     </main>
     
 </body>
 </html>
+
 
 
 
