@@ -10,9 +10,9 @@
 
     <header class="hero-header">
         <div class="header-content">
-            <a href="index.html" class="btn">Übersicht</a>
+            <a href="index.html">Übersicht</a>
             <h1>Techniktage 2025</h1>
-            <p>Coding Academy</p>
+            <p>Coding Academy: Einführung in Python</p>
         </div>
     </header>
 
@@ -21,190 +21,411 @@
             <h2>Inhalt</h2>
             <ul>
                 <li><a href="#einleitung">Einleitung</a></li>
-                <li><a href="#python">Python</a></li>
+                <li><a href="#python">Grundlagen</a></li>
                 <ul>
-                    <li><a href="#pyvars">Variablen</a></li>
-                    <li><a href="#pyio">Aus- und Eingabe</a></li>
+                    <li><a href="#pyvars">Variablen & Datentypen</a></li>
+                    <li><a href="#pyio">Ein- und Ausgabe</a></li>
                     <li><a href="#pycommand">Kommentare</a></li>
-                    <li><a href="#pyaufgabe1">Aufgabe 1 - Alter und Name</a></li>
-                    <li><a href="#pyifelse">If-Else Bedingung</a></li>
-                    <li><a href="#pyaufgabe2">Aufgabe 2 - Erwachsen</a></li>
-                    <li><a href="#elifandor">elif, and, or</a></li>
-                    <li><a href="#pyrandnum">Zufällige Zahlen</a></li>
-                    <li><a href="#pyaufgabe3">Aufgabe 3 - Zahlen raten I</a></li>
+                    <li><a href="#pyaufgabe1">Übung 1: Alter und Name</a></li>
+                    <li><a href="#pymath">Rechenoperatoren</a></li>
+                    <li><a href="#pycalc_ex">Übung 2: Geometrie-Rechner</a></li>
+                    <li><a href="#pyifelse">Verzweigungen (If-Else)</a></li>
+                    <li><a href="#pyaufgabe2">Übung 3: Türsteher</a></li>
+                    <li><a href="#elifandor">Erweiterte Bedingungen (elif, and, or)</a></li>
+                    <li><a href="#pyrandnum">Zufallszahlen</a></li>
+                    <li><a href="#pyaufgabe3">Übung 4: Zahlenraten I</a></li>
                     <li><a href="#pyloop">Schleifen</a></li>
-                    <li><a href="#pyaufgabe4">Aufgabe 4 - Schleifen</a></li>
-                    <li><a href="#pyaufgabe5">Aufgabe 5 - Zahlen raten II</a></li>
-                    <li><a href="#pyaufgabe6">Aufgabe 6 - Zahlen raten III</a></li>
+                    <li><a href="#pyaufgabe4">Übung 5: Die Wiederholung</a></li>
+                    <li><a href="#pyaufgabe5">Übung 6: Zahlenraten II</a></li>
+                    <li><a href="#pyaufgabe6">Übung 7: Zahlenraten III</a></li>
                 </ul>
             </ul> 
         </div>
          
         <div id="chapters">
             <h2 id="einleitung">Einleitung</h2>
-            <p>Willkommen zur Coding Academy.</p>
+            <p>Willkommen bei den Techniktagen 2025! In diesem Kurs lernen wir die Grundlagen der Programmierung mit <strong>Python</strong>. Python ist eine der beliebtesten Programmiersprachen der Welt, da sie sehr mächtig und gleichzeitig leicht zu lesen ist.</p>
 
-            <h2 id="python">Python</h2>
-
-            <h3 id="pyvars">Variablen</h3>
+            <hr>
             
-            <p>Datentypen: int, bool, float, string, char, ...</p>
+            <h2 id="python">Grundlagen</h2>
+
+            <h3 id="pyvars">Variablen & Datentypen</h3>
             
-            <p>
-                <code class="language-python">
-alter = 20
-name = "Lukas"
-                </code>
-            </p>
+            <p>Variablen sind wie Boxen oder Container, in denen wir Daten speichern können, um sie später wiederzuverwenden. Jede Variable hat einen Namen und einen Wert.</p>
+            
+            <p><strong>Wichtige Datentypen:</strong></p>
+            <ul>
+                <li><code>int</code> (Integer): Ganze Zahlen (z. B. 5, -10, 42)</li>
+                <li><code>float</code>: Kommazahlen (z. B. 3.14, -0.01) – <em>Achtung: Punkt statt Komma!</em></li>
+                <li><code>str</code> (String): Textzeichenketten (z. B. "Hallo", 'Python')</li>
+                <li><code>bool</code> (Boolean): Wahrheitswerte (True, False)</li>
+            </ul>
 
-            <p>Regeln: Symbole a-z, A-Z, 0-9 und _. Es dürfen keine Zahlen am Beginn des Namens stehen und manche Wörter (if, for, while) können nicht verwendet werden.</p>
-            <p>Außerdem sind zum Beispiel <code>alter</code> und <code>Alter</code> unterschiedliche Variablen.</p>
+            <p>Code-Beispiel:</p>
+            <p><code class="language-python">
+alter = 20           # Das ist ein Integer
+name = "Lukas"       # Das ist ein String
+groesse = 1.85       # Das ist ein Float
+            </code></p>
 
-            <h3 id="pyio">Aus- Eingabe</h3>
+            <p><strong>Regeln für Variablennamen:</strong></p>
+            <ul>
+                <li>Erlaubt sind Buchstaben (a-z, A-Z), Zahlen (0-9) und der Unterstrich (_).</li>
+                <li>Ein Name darf <strong>nicht</strong> mit einer Zahl beginnen.</li>
+                <li>Groß- und Kleinschreibung ist wichtig: <code>alter</code> und <code>Alter</code> sind zwei verschiedene Variablen!</li>
+                <li>Reservierte Wörter (wie <code>if</code>, <code>else</code>, <code>for</code>, <code>print</code>) dürfen nicht als Name verwendet werden.</li>
+            </ul>
 
-            <p>print, input</p>
+            <h3 id="pyio">Ein- und Ausgabe</h3>
 
-            <p>
-                <code class="language-python">
+            <p>Damit unser Programm mit dem Benutzer interagieren kann, nutzen wir zwei grundlegende Befehle:</p>
+            <ul>
+                <li><code>print()</code>: Gibt Text oder Werte auf dem Bildschirm aus.</li>
+                <li><code>input()</code>: Wartet auf eine Eingabe des Benutzers über die Tastatur.</li>
+            </ul>
+
+            <p><strong>Wichtig:</strong> Alles, was wir mit <code>input()</code> einlesen, ist zunächst immer Text (String). Wenn wir damit rechnen wollen, müssen wir es umwandeln (z. B. mit <code>int()</code>).</p>
+
+            <p><code class="language-python">
+# Ausgabe
 print("Hello World")
+
+# Eingabe
 name = input("Bitte gib deinen Namen ein: ")
 
-# Type conversion
-print(name)
+# Ausgabe mit Variablen (f-String)
 print(f"Dein Name ist {name}")
-                </code>
-            </p>
+            </code></p>
+
 
             <h3 id="pycommand">Kommentare</h3>
 
-            <p>
-                <code class="language-python">
-# Einzeilig
+            <p>Kommentare sind Notizen im Code, die vom Computer ignoriert werden. Sie helfen uns Menschen zu verstehen, was der Code tut.</p>
+
+            <p><code class="language-python">
+# Das ist ein einzeiliger Kommentar. Alles dahinter wird ignoriert.
 
 """
-Mehrzeilig
+Dies ist ein mehrzeiliger Kommentar.
+Er kann über mehrere Zeilen gehen.
+Sehr praktisch für längere Erklärungen.
 """
-                </code>
-            </p>
+            </code></p>
 
-            <h3 id="pyaufgabe1">Aufgabe 1 - Alter und Name</h3>
+            <h3 id="pyaufgabe1">Übung 1: Alter und Name</h3>
 
-            <p><strong>Eingabe:</strong><br>
-            Gib deinen Namen ein:<br>
-            Gib dein Alter ein:</p>
+            <p>Erstelle ein Programm, das den Benutzer nach seinem Namen und seinem Alter fragt und ihn dann freundlich begrüßt.</p>
 
-            <p><strong>Ausgabe:</strong><br>
-            Hallo, Lukas du bist 20</p>
+            <p><strong>Beispielablauf:</strong><br>
+            <em>Eingabe:</em> Gib deinen Namen ein: Lukas<br>
+            <em>Eingabe:</em> Gib dein Alter ein: 20<br>
+            <em>Ausgabe:</em> Hallo Lukas, du bist 20 Jahre alt.</p>
 
-            <p><strong>Lösung:</strong></p>
-            <p>
-                <code class="language-python">
+            <details>
+            <summary>Lösung anzeigen</summary>
+            <p><code class="language-python">
 name = input("Gib deinen Namen ein: ")
 alter = input("Gib dein Alter ein: ")
-print(f"Hallo {name}, du bist {alter} Jahre alt")
-                </code>
-            </p>
+print(f"Hallo {name}, du bist {alter} Jahre alt.")
+            </code></p>
+            </details>
 
-            <h3 id="pyifelse">If-Else Bedingung</h3>
+            <h3 id="pymath">Rechenoperatoren</h3>
 
-            <p>Zwei oder mehrere Dinge unterscheiden.</p>
-            <p>Operatoren: <code>==</code>, <code>!=</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&gt;</code></p>
+            <p>Computer sind im Grunde extrem schnelle Taschenrechner. In Python können wir ganz einfach rechnen.</p>
+            
+            <p><strong>Die wichtigsten Operatoren:</strong></p>
+            <ul>
+                <li><code>+</code> : Plus (Addition)</li>
+                <li><code>-</code> : Minus (Subtraktion)</li>
+                <li><code>*</code> : Mal (Multiplikation)</li>
+                <li><code>/</code> : Geteilt (Division) - <em>Ergebnis ist immer eine Kommazahl</em></li>
+                <li><code>**</code> : Potenzieren (z. B. <code>3 ** 2</code> ist 3^2 also 9)</li>
+            </ul>
+
+            <p>Code-Beispiel:</p>
+            <p><code class="language-python">
+x = 10
+y = 5
+
+summe = x + y       # Ergebnis: 15
+produkt = x * y     # Ergebnis: 50
+potenz = x ** 2     # Ergebnis: 100 (10 hoch 2)
+
+print(summe)
+            </code></p>
+            
+            <p><em>Hinweis: Wie in der Mathematik gilt auch hier "Punkt vor Strich". Man kann Klammern <code>()</code> nutzen, um die Reihenfolge zu ändern.</em></p>
+
+
+           <h3 id="pycalc_ex">Übung 2: Geometrie-Rechner</h3>
+
+            <p>Jetzt wenden wir das Gelernte an. Schreibe ein kleines Programm, das Flächen berechnet. Der Benutzer soll die Werte eingeben.</p>
+
+            <h4>Teil A: Das Rechteck</h4>
+            <p>Frage nach <strong>Länge</strong> und <strong>Breite</strong> und berechne:</p>
+            <ul>
+                <li>Fläche: A = L * B</li>
+                <li>Umfang: U = 2 * (L + B)</li>
+            </ul>
+            
+            <details>
+            <summary>Lösung Rechteck</summary>
+            <p><code class="language-python">
+# Wir brauchen float(), da Maße auch Kommazahlen sein können
+laenge = float(input("Länge eingeben: "))
+breite = float(input("Breite eingeben: "))
+
+flaeche = laenge * breite
+umfang = 2 * (laenge + breite)
+
+print(f"Fläche: {flaeche}")
+print(f"Umfang: {umfang}")
+            </code></p>
+            </details>
+
+            <h4>Teil B: Der Kreis</h4>
+            <p>Frage nach dem <strong>Radius</strong> und berechne die Fläche.</p>
+            <p>Formel: A = &pi; * r<sup>2</sup></p>
+            <p><em>Tipp: Nutze für &pi; einfach den Wert 3.14.</em></p>
+
+            <details>
+            <summary>Lösung Kreis</summary>
+            <p><code class="language-python">
+radius = float(input("Radius eingeben: "))
+
+# Fläche = Pi * r hoch 2
+flaeche = 3.14 * (radius ** 2)
+
+print(f"Die Kreisfläche beträgt: {flaeche}")
+            </code></p>
+            </details>
+
+            <h4>Teil C: Das Dreieck</h4>
+            <p>Frage nach <strong>Grundlinie</strong> (g) und <strong>Höhe</strong> (h).<br>
+            Formel: (g * h) / 2</p>
+
+            <details>
+            <summary>Lösung Dreieck</summary>
+            <p><code class="language-python">
+grundlinie = float(input("Grundlinie: "))
+hoehe = float(input("Höhe: "))
+
+flaeche = (grundlinie * hoehe) / 2
+
+print(f"Dreiecksfläche: {flaeche}")
+            </code></p>
+            </details>
+
+            <h3 id="pyifelse">Verzweigungen (If-Else)</h3>
+
+            <p>Mit <code>if</code> (wenn) und <code>else</code> (sonst) können wir Entscheidungen treffen. Der Computer prüft eine Bedingung. Ist sie wahr, wird der erste Block ausgeführt, sonst der zweite.</p>
+
+            <p><strong>Vergleichsoperatoren:</strong></p>
+            <ul>
+                <li><code>==</code> (gleich)</li>
+                <li><code>!=</code> (ungleich)</li>
+                <li><code>&lt;</code> (kleiner als), <code>&lt;=</code> (kleiner gleich)</li>
+                <li><code>&gt;</code> (größer als), <code>&gt;=</code> (größer gleich)</li>
+            </ul>
 
             <p>Beispiel:</p>
-            <p>
-                <code class="language-python">
-if 10 == 10:
-    print("Hi")
+            <p><code class="language-python">
+name = input("Wie heißt du? ")
 
-name = input("Gib deinen Namen ein: ")
 if name == "Lukas":
-    print("Du heißt Lukas")
+    print("Hey, du heißt ja wie ich!")
 else:
-    print("Du heißt nicht Lukas")
-                </code>
-            </p>
+    print("Schöner Name!")
+            </code></p>
+            
+            <p><em>Achte auf die Einrückung (Tabulator) nach dem Doppelpunkt! In Python bestimmt die Einrückung, was zum if-Block gehört.</em></p>
 
-            <h3 id="pyaufgabe2">Aufgabe 2 - Erwachsen</h3>
-            <p>
-                <code class="language-python">
+
+            <h3 id="pyaufgabe2">Übung 3: Der Türsteher</h3>
+
+            <p>Schreibe ein Programm, das prüft, ob eine Person volljährig ist.</p>
+
+            <p><strong>Beispielablauf:</strong><br>
+            <em>Eingabe:</em> Gib dein Alter ein: 17<br>
+            <em>Ausgabe:</em> Du bist noch nicht erwachsen.</p>
+
+            <details>
+            <summary>Lösung anzeigen</summary>
+            <p><code class="language-python">
+# Wir müssen die Eingabe in eine Zahl umwandeln: int()
 alter = int(input("Gib dein Alter ein: "))
+
 if alter >= 18:
     print("Du bist Erwachsen")
 else:
     print("Du bist nicht Erwachsen")
-                </code>
-            </p>
+            </code></p>
+            </details>
 
-            <h3 id="elifandor">elif, and, or</h3>
-            <p>
-                <code class="language-python">
+
+            <h3 id="elifandor">Erweiterte Bedingungen (elif, and, or)</h3>
+
+            <p>Manchmal gibt es mehr als nur zwei Möglichkeiten ("Ja" oder "Nein"). Dafür nutzen wir <code>elif</code> (else if).</p>
+            <p>Außerdem können wir Bedingungen verknüpfen:</p>
+            <ul>
+                <li><code>and</code>: Beide Bedingungen müssen wahr sein.</li>
+                <li><code>or</code>: Mindestens eine Bedingung muss wahr sein.</li>
+            </ul>
+
+            <p>Beispiel mit <code>and</code> (Bereichsprüfung):</p>
+            <p><code class="language-python">
 alter = int(input("Gib dein Alter ein: "))
+
 if alter >= 13 and alter <= 19:
-    print("Du bist ein Teenager")
+    print("Du bist ein Teenager.")
 else:
-    print("Du bist kein Teenager")
-                </code>
-            </p>
+    print("Du bist kein Teenager.")
+            </code></p>
 
-            <h3 id="pyrandnum">Zufällige Zahlen</h3>
-            <p>
-                <code class="language-python">
-import random
-# random.randint(untergrenze, obergrenze)
-zahl = random.randint(1,100)
-                </code>
-            </p>
+            <p>Beispiel mit <code>elif</code> (Mehrere Stufen):</p>
+            <p><code class="language-python">
+health = 75
 
-            <h3 id="pyaufgabe3">Aufgabe 3 - Zahlen raten I</h3>
-            <p>
-                <code class="language-python">
-import random
-
-zahl = random.randint(1,10)
-geraten = int(input("Gib eine Zahl ein: "))
-
-if zahl == geraten:
-    print("Du hast die Zahl erraten")
+if health == 100:
+    print("Perfekt! Volle Gesundheit.")
+elif health > 50:
+    print("Dir geht es gut.")
 else:
-    print(f"Du hast die Zahl nicht erraten. Die Zahl war {zahl}")
-                </code>
-            </p>
+    print("Achtung! Wenig Leben übrig.")
+            </code></p>
 
-            <h3 id="pyloop">Schleifen</h3>
-            <p>
-                <code class="language-python">
-zaehler = 0
-while zaehler < 3:
-    print("Hallo")
-    zaehler = zaehler + 1
-                </code>
-            </p>
+
+            <h3 id="pyrandnum">Zufallszahlen</h3>
+
+            <p>Um Spiele spannender zu machen, brauchen wir den Zufall. In Python importieren wir dafür das Modul <code>random</code>.</p>
+
+            <p><code class="language-python">
+import random
+
+# Erzeugt eine zufällige ganze Zahl zwischen 1 und 100
+zahl = random.randint(1, 100)
+print(f"Die Zufallszahl ist: {zahl}")
+            </code></p>
+
+
+            <h3 id="pyaufgabe3">Übung 4: Zahlenraten I</h3>
+
+            <p>Der Computer denkt sich eine Zahl zwischen 1 und 10 aus. Der Spieler muss sie erraten.</p>
             
-            <h3 id="pyaufgabe4">Aufgabe 4 - Schleifen</h3>
-            <p>
-                <code class="language-python">
-wiederholungen = int(input("Gib die Anzahl der Wiederholungen an: "))
-wort = input("Gib ein Wort ein: ")
+            <p><strong>Anforderung:</strong><br>
+            Das Programm soll sagen, ob man richtig geraten hat oder nicht. Falls nicht, soll die richtige Zahl verraten werden.</p>
 
+            <details>
+            <summary>Lösung anzeigen</summary>
+            <p><code class="language-python">
+import random
+
+geheimzahl = random.randint(1, 10)
+tipp = int(input("Rate eine Zahl zwischen 1 und 10: "))
+
+if tipp == geheimzahl:
+    print("Super! Du hast die Zahl erraten.")
+else:
+    print(f"Leider falsch. Die Zahl war {geheimzahl}.")
+            </code></p>
+            </details>
+
+
+            <h3 id="pyloop">Schleifen (Loops)</h3>
+
+            <p>Schleifen verwenden wir, wenn Code mehrfach ausgeführt werden soll, ohne dass wir ihn oft kopieren müssen. Die <code>while</code>-Schleife läuft so lange, wie ihre Bedingung wahr ist.</p>
+
+            <p>Beispiel:</p>
+            <p><code class="language-python">
 zaehler = 0
-while zaehler < wiederholungen:
+
+# Solange der Zähler kleiner als 3 ist...
+while zaehler < 3:
+    print(f"Durchlauf Nummer {zaehler}")
+    zaehler = zaehler + 1  # Wichtig: Zähler erhöhen, sonst läuft sie ewig!
+            </code></p>
+
+
+            <h3 id="pyaufgabe4">Übung 5: Die Wiederholung</h3>
+
+            <p>Lass den Benutzer ein Wort und eine Anzahl eingeben. Das Programm soll das Wort so oft wiederholen, wie gewünscht.</p>
+
+            <p><strong>Eingabe:</strong> Wort: "Hallo", Anzahl: 3<br>
+            <strong>Ausgabe:</strong><br>
+            Hallo<br>
+            Hallo<br>
+            Hallo</p>
+
+            <details>
+            <summary>Lösung anzeigen</summary>
+            <p><code class="language-python">
+wort = input("Welches Wort soll wiederholt werden? ")
+anzahl = int(input("Wie oft? "))
+
+i = 0
+while i < anzahl:
     print(wort)
-    zaehler = zaehler + 1
-                </code>
-            </p>
+    i = i + 1
+            </code></p>
+            </details>
 
-            <h3 id="pyaufgabe5">Aufgabe 5 - Zahlen raten II</h3>
-            <p>Erweitern auf 3 mal raten.</p>
 
-            <h3 id="pyaufgabe6">Aufgabe 6 - Zahlen raten III</h3>
-            <p>Erweitern auf Hinweis: höher oder tiefer.</p>
+            <h3 id="pyaufgabe5">Übung 6: Zahlenraten II</h3>
+            <p>Erweitere das Spiel aus Übung 3. Der Spieler hat nun <strong>3 Versuche</strong>, um die Zahl zu erraten.</p>
+            <p><em>Tipp: Verwende eine Schleife, die maximal 3 Mal läuft, oder abbricht, wenn die Zahl erraten wurde (<code>break</code>).</em></p>
+
+            <details>
+            <summary>Lösung anzeigen</summary>
+            <p><code class="language-python">
+import random
+
+geheimzahl = random.randint(1, 10)
+zaehler = 0
+
+while zaehler < 3:
+    tipp = int(input("Rate eine Zahl zwischen 1 und 10: "))
+    if tipp == geheimzahl:
+        print("Super! Du hast die Zahl erraten.")
+        break;
+    else:
+        print(f"Leider falsch. Die Zahl war {geheimzahl}.")
+        zaehler = zaehler + 1
+            </code></p>
+            </details>
+
+
+            <h3 id="pyaufgabe6">Übung 7: Zahlenraten III</h3>
+            <p>Erweitere das Spiel weiter: Wenn der Spieler falsch rät, gib ihm einen Hinweis, ob die gesuchte Zahl <strong>größer</strong> oder <strong>kleiner</strong> ist als sein Tipp.</p>
+             <details>
+            <summary>Lösung anzeigen</summary>
+            <p><code class="language-python">
+import random
+
+geheimzahl = random.randint(1, 10)
+zaehler = 0
+
+while zaehler < 3:
+    tipp = int(input("Rate eine Zahl zwischen 1 und 10: "))
+    if tipp == geheimzahl:
+        print("Super! Du hast die Zahl erraten.")
+        break;
+    elif tipp < geheimzahl:
+        print(f"Leider falsch. Die Geheimzahl ist groesser.")
+        zaehler = zaehler + 1
+    elif tipp > geheimzahl:
+        print(f"Leider falsch. Die Geheimzahl ist kleiner.")
+        zaehler = zaehler + 1
+            </code></p>
+            </details>
+
+            </code></p>
+            </details>
+
+            <hr>
         </div>
     </main>
     
 </body>
 </html>
-
-
-
-
-
