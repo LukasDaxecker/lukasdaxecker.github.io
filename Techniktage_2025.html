@@ -10,6 +10,7 @@
 
     <header class="hero-header">
         <div class="header-content">
+            <a href="index.html">Übersicht</a>
             <h1>Techniktage 2025</h1>
             <p>Coding Academy<p>
         </div>
@@ -47,38 +48,195 @@
             <hr>
             <h2 id="python">Python</h2>
 
-            <h3 id="pyvars">Variables</h3>
+            <h3 id="pyvars">Variablen</h3>
+            
+            <p>Datentypen: int, bool, float, string, char, ...</p>
+            
+            <p><code class="language-python">
+                alter = 20 <br>
+                name = "Lukas"
+            </code><p>
 
-            <div class="blue-background">
-                <pre><code>
-                    alter = 20
-                    name = "Lukas"
-                </code></pre>
-            </div>
+            <p>Regeln: Symbole a-z,A-Z,0-9 und _. Es dürfen keine Zahlen am Beginn des Namen stehen und manche wörter (if, for, while, können nicht verwendet werden)</p>
+            <p>Außerdem sind zum Beispiel <code>alter</code> und <code>Alter</code> unterschiedliche Variablen.
 
             <h3 id="pyio">Aus- Eingabe</h3>
 
+            print, input 
+
+            print("Hello World")
+            name = input("Bitte gib deinen namen ein: ")
+
+            type conversion
+
+            print(name)
+            print("Dein name ist {name}")
+
+
             <h3 id="pycommand">Kommentare</h3>
+
+            # Einzeilig
+
+            Mehrzeilig
+            """
+            """
+            '''
+            '''
 
             <h3 id="pyaufgabe1">Aufgabe 1 - Alter und Name</h3>
 
+            Eingabe:
+            Gib deinen Namen ein: 
+            Gib dein Alter ein: 
+
+            Ausgabe:
+            Hallo, Lukas du bist 20
+
+            Lösung: 
+            name = input("Gib deinen Namen ein: ")
+            alter = input("Gib dein Alter ein: ")
+            print("Hallo {name}, du bist {alter} Jahre alter")
+
+
+
             <h3 id="pyifelse">If-Else Bediengung</h3>
+
+            Zwei oder mehrere Dinge unterscheiden
+
+            Operatoren => ==, |=, <=, >=, <,>
+
+            bsp
+            if 10 == 10:
+                print("Hi")
+
+            name = input("Gib deinen Namen ein: ")
+            if x == "Lukas":
+                print("Du heißt Lukas")
+            else
+                print("Du heißt nicht Lukas")
+
+
 
             <h3 id="pyaufgabe2">Aufgabe 2 - Erwachsen</h3>
 
+            Eingabe:
+            Gib dein alter ein:
+
+            Ausgabe:
+            Du bist Erwachsen
+            oder 
+            Du bist nicht Erwachsen
+
+            Lösung:
+            alter = input("Gib dein alter ein: ")
+            if alter >= 18:
+                print("Du bist Erwachsen")
+            else 
+                print("Du bist nicht Erwachsen")
+
+
             <h3 id="elifandor">elif, and, or</h3>
+
+            If verbinden <code> =<  </code>and,or 
+
+            bsp
+            alter = input("Gib dein alter ein: ")
+            if alter >= 13 and alter <= 19:
+                print("Du bist ein Teenager")
+            else
+                print("Du bist kein Teenager")
+
+
+            elif 
+
+            bsp
+            if health == 100:
+                print("Full HP")
+            elif health > 50:
+                print("Health HP")
+            else
+                print("Low health Points")
+
+
 
             <h3 id="pyrandnum">Zufällig Zahlen</h3>
 
+            import random
+
+            random.randint(untergrenze, obergränze)
+
+            zahl = random.randint(1,100)
+
+
             <h3 id="pyaufgabe3">Aufgabe 3 - Zahlen Rate Spiel I</h3>
+
+            Aufgabe:
+            Es wird eine Zahl generiert und Nutzer muss diese erraten
+
+            Eingabe:
+            Gib eine Zahl ein:
+
+            Ausgabe:
+            Du hast die Zahl erraten
+            oder
+            Du hast die Zahl nicht erraten. Die Zahl war x
+
+            lösung:
+
+            import random
+
+            zahl = random.randint(1,10)
+            geraten = input("Gib eine Zahl ein: ")
+
+            if zahl == geraten:
+                print("Du hast die Zahl erraten")
+            else
+                print("Du hast die Zahl nicht erraten. Die Zahl war zahl")
+
+
 
             <h3 id="pyloop">Schleifen</h3>
 
+            while, for
+
+            bsp.
+            zaehler = 0
+            while zaehler < 3:
+                print("Hallo")
+                zaehler = zaehler + 1
+
+
+
             <h3 id="pyaufgabe4">Aufgabe 4 - Schleifen</h3>
+
+            Nutzer gibt zahl und wort an. 
+
+            Eingabe:
+            Gibt die Anzahl der Wiederholungen an
+            Gib ein Wort ein
+
+            Ausgabe:
+            Hallo
+            Hallo
+            Hallo
+
+            Löse:
+            wiederholungen = input("Gibt die Anzahl der Wiederholungen an")
+            wort = input("Gib ein Wort ein")
+
+            zaehler = 0
+            while zaehler < wiederholungen:
+                print(wort)
+
+
 
             <h3 id="pyaufgabe5">Aufgabe 5 - Zahlen Rate Spiel II</h3>
 
+Erweitern auf 3 mal raten
+
             <h3 id="pyaufgabe6">Aufgabe 6 - Zahlen Rate Spiel III</h3>
+
+Erweitern auf hinweis höher oder tiefer
 
             <hr>
         </div>
@@ -87,185 +245,6 @@
 </body>
 </html>
 
-<h2>Python</h2>
-<h3>Variablen</h3>
-
-Datentypen: int, bool, float, string, char, ...
-
-erstellen:
-
-name = wert
-bsp
-alter = 20
-name = "Lukas"
-
-regeln:
-
-Nur a-z und A-Z und _. Manche Wörter sind resaviert (if, for, while, ...)
-alter und Alter unterschiedliche variablen
-
-<h3>Aus- Eingabe</h3>
-
-print, input 
-
-print("Hello World")
-name = input("Bitte gib deinen namen ein: ")
-
-type conversion
-
-print(name)
-print("Dein name ist {name}")
-
-<h3>Kommentare</h3>
-
-# Einzeilig
-
-Mehrzeilig
-"""
-"""
-'''
-'''
-
-<h3>Aufgabe 1 - Alter und Name</h3>
-
-Eingabe:
-Gib deinen Namen ein: 
-Gib dein Alter ein: 
-
-Ausgabe:
-Hallo, Lukas du bist 20
-
-Lösung: 
-name = input("Gib deinen Namen ein: ")
-alter = input("Gib dein Alter ein: ")
-print("Hallo {name}, du bist {alter} Jahre alter")
-
-<h3>If-Else Bediengung</h3>
-
-Zwei oder mehrere Dinge unterscheiden
-
-Operatoren => ==, |=, <=, >=, <,>
-
-bsp
-if 10 == 10:
-    print("Hi")
-
-name = input("Gib deinen Namen ein: ")
-if x == "Lukas":
-    print("Du heißt Lukas")
-else
-    print("Du heißt nicht Lukas")
-
-<h3>Aufgabe - Erwachsen</h3>
-
-Eingabe:
-Gib dein alter ein:
-
-Ausgabe:
-Du bist Erwachsen
-oder 
-Du bist nicht Erwachsen
-
-Lösung:
-alter = input("Gib dein alter ein: ")
-if alter >= 18:
-    print("Du bist Erwachsen")
-else 
-    print("Du bist nicht Erwachsen")
-
-<h3>elif, and, or</h3>
-
-If verbinden => and,or 
-
-bsp
-alter = input("Gib dein alter ein: ")
-if alter >= 13 and alter <= 19:
-    print("Du bist ein Teenager")
-else
-    print("Du bist kein Teenager")
-
-
-elif 
-
-bsp
-if health == 100:
-    print("Full HP")
-elif health > 50:
-    print("Health HP")
-else
-    print("Low health Points")
-
-<h3>Zufällig Zahlen</h3>
-
-import random
-
-random.randint(untergrenze, obergränze)
-
-zahl = random.randint(1,100)
-
-<h3>Aufgabe 3 - Zahlen Rate Spiel I</h3>
-
-Aufgabe:
-Es wird eine Zahl generiert und Nutzer muss diese erraten
-
-Eingabe:
-Gib eine Zahl ein:
-
-Ausgabe:
-Du hast die Zahl erraten
-oder
-Du hast die Zahl nicht erraten. Die Zahl war x
-
-lösung:
-
-import random
-
-zahl = random.randint(1,10)
-geraten = input("Gib eine Zahl ein: ")
-
-if zahl == geraten:
-    print("Du hast die Zahl erraten")
-else
-    print("Du hast die Zahl nicht erraten. Die Zahl war zahl")
-
-<h3>Schleifen</h3>
-
-while, for
-
-bsp.
-zaehler = 0
-while zaehler < 3:
-    print("Hallo")
-    zaehler = zaehler + 1
-
-<h3>Aufgabe 4 - Schleifen</h3>
-
-Nutzer gibt zahl und wort an. 
-
-Eingabe:
-Gibt die Anzahl der Wiederholungen an
-Gib ein Wort ein
-
-Ausgabe:
-Hallo
-Hallo
-Hallo
-
-Löse:
-wiederholungen = input("Gibt die Anzahl der Wiederholungen an")
-wort = input("Gib ein Wort ein")
-
-zaehler = 0
-while zaehler < wiederholungen:
-    print(wort)
-
-<h3>Aufgabe 4 - Zahlen Rate Spiel II</h3>
-
-Erweitern auf 3 mal raten
-
-<h3>Aufgabe 5 - Zahlen Rate Spiel III</h3>
-
-Erweitern auf hinweis höher oder tiefer
 
 
 

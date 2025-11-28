@@ -1,76 +1,101 @@
-body {
-    color: darkslategray; 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333; 
     line-height: 1.6;
+    background-color: #ffffff;
 }
 
 .container {
     max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-h1 {
-    color: #ffffff;
-    font-weight: 300; 
-    text-align: center;
-}
-
-h2 {
-    color: darkslategray;
-    font-weight: bold; 
-    font-size: 1.9rem;
-}
-
-h3 {
-    color: darkslategray;
-    font-weight: bold; 
-    font-size: 1.6rem;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
 .hero-header {
-    background: linear-gradient(135deg, #0081a4, #004caa); 
-    padding: 40px 20px 45px 20px;
+    background-color: #192A56; 
+    color: white;
+    padding: 80px 20px;
     text-align: center;
-    box-shadow: 0 0 50px rgba(0, 114, 255, 0.5); 
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.header-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 0%;
+.hero-header h1 {
+    font-size: 2.8em;
+    margin-bottom: 5px;
+    font-weight: 900; 
 }
 
-.header-content p {
-    font-size: 1.2rem;
-    opacity: 0.8;
-    margin-top: 0%;
-    color: lightgray;
+.hero-header p {
+    font-size: 1.2em;
+    opacity: 0.85; 
+}
+
+.hero-header a {
+    font-size: 1.2em;
+    color: white;
+    opacity: 0.85; 
+}
+
+h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    color: #192A56;
+    border-bottom: 2px solid #e0e0e0; 
+    padding-bottom: 5px;
 }
 
 .blue-background {
-    background-color: rgba(173, 216, 230, 0.521);
-    padding: 0.25rem 0.7rem 0.25rem 0.7rem;
+    background-color: #F0F8FF;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    border: 1px solid #e0e0e0;
 }
 
-li {
-   color: darkslategray; 
-}
-
-a {
-    color: #0264a0; 
-    text-decoration: none;
-    font-size: 1.4rem;
-}
-
-hr {
-    color: rgba(211, 211, 211, 0.304);
+.blue-background h2 {
+    color: #192A56;
+    border-bottom: 1px solid #c0c0c0; 
+    margin-top: 0;
+    padding-bottom: 10px;
 }
 
 code {
-   color: darkslategray; 
-   font-size: 1.3rem;
-   text-align: left;
+    background-color: #F0F8FF;
+}
+
+ul {
+    list-style-type: none; 
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+ul li {
+    padding: 5px 0;
+}
+
+a {
+    color: #1750AC; 
+    text-decoration: none; 
+    font-weight: 500;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline; 
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 40px 0;
 }
