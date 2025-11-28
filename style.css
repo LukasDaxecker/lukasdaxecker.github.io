@@ -1,8 +1,5 @@
-/* style.css */
-
-/* Allgemeine Einstellungen & Dark Mode */
 body {
-    color: #f0f0f0; /* Helle Textfarbe */
+    color: darkslategray; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
@@ -24,7 +21,13 @@ h1 {
 h2 {
     color: darkslategray;
     font-weight: bold; 
-    font-size: 1.8rem;
+    font-size: 1.9rem;
+}
+
+h3 {
+    color: darkslategray;
+    font-weight: bold; 
+    font-size: 1.6rem;
 }
 
 .hero-header {
@@ -44,9 +47,10 @@ h2 {
     font-size: 1.2rem;
     opacity: 0.8;
     margin-top: 0%;
+    color: lightgray;
 }
 
-#inhaltsverzeichnis {
+.blue-background {
     background-color: rgba(173, 216, 230, 0.521);
     padding: 0.25rem 0.7rem 0.25rem 0.7rem;
 }
@@ -63,4 +67,10 @@ a {
 
 hr {
     color: rgba(211, 211, 211, 0.304);
+}
+
+code {
+   color: darkslategray; 
+   font-size: 1.3rem;
+   text-align: left;
 }
