@@ -38,6 +38,8 @@
                     <li><a href="#pyaufgabe4">Übung 5: Die Wiederholung</a></li>
                     <li><a href="#pyaufgabe5">Übung 6: Zahlenraten II</a></li>
                     <li><a href="#pyaufgabe6">Übung 7: Zahlenraten III</a></li>
+                    <li><a href="#pyaufgabe8">Übung 8: Taschenrechner I</a></li>
+                    <li><a href="#pyaufgabe9">Übung 9: Taschenrechner II</a></li>
                 </ul>
             </ul> 
         </div>
@@ -373,7 +375,7 @@ while i < anzahl:
 
 
             <h3 id="pyaufgabe5">Übung 6: Zahlenraten II</h3>
-            <p>Erweitere das Spiel aus Übung 3. Der Spieler hat nun <strong>3 Versuche</strong>, um die Zahl zu erraten.</p>
+            <p>Erweitere das Spiel aus Übung 4. Der Spieler hat nun <strong>3 Versuche</strong>, um die Zahl zu erraten.</p>
             <p><em>Tipp: Verwende eine Schleife, die maximal 3 Mal läuft, oder abbricht, wenn die Zahl erraten wurde (<code>break</code>).</em></p>
 
             <details>
@@ -420,9 +422,74 @@ while zaehler < 3:
             </code></p>
             </details>
 
+            <h3 id="pyaufgabe8">Übung 8: Taschenrechner I</h3>
+ 
+            <p>Das Ziel ist es einen Taschenrechner für Formen zu bauen.</p>
+            
+            <p><strong>Anforderung:</strong><br>
+            Der Nutzer soll zuerst eingeben können, von welcher Form (Dreieck, Kreis, Quadrat, ...) die Fläche berechnet werden soll und dannach die maße für besagte Figur eingeben.</p>
+            <p><em>Tipp: Um es leichter zu machen, weise jeder Form eine Zahl zu.</em></p>
+            
+            <details>
+            <summary>Lösung anzeigen</summary>
+            <p><code class="language-python">
+import math # Damit math.pi verwendet werden kann, ansonsten statt pi 3.14 verwenden
+
+form = int(input("Gib eine Form ein (1 = Dreieck, 2 = Rechteck, 3 = Kreis): ")) 
+
+if form == 1:
+    ha = int(input("Gib die Höhe ein: ")) 
+    a = int(input("Gib die Länge ein: ")) 
+    area = a * ha / 2
+    print(area) 
+elif form == 2:
+    b = int(input("Gib die Breite ein: ")) 
+    a = int(input("Gib die Länge ein: ")) 
+    area = a * b 
+    print(area) 
+elif form == 3:
+    r = int(input("Gib den Radius ein: ")) 
+    area = math.pi * r * r
+    print(area) 
+else:
+    print("Form exestiert nicht!")
             </code></p>
             </details>
 
+            <h3 id="pyaufgabe9">Übung 9: Taschenrechner II</h3>
+
+            <p>Erweitere den Rechner aus Übung 8 mit der Auswahlmöglichkeit zwischen Fläche und Umfang der Formen.</p>
+            
+            <p><strong>Anforderung:</strong><br>
+            Nach der Formauswahl sollte der Nutzer angeben können ob Fläche oder Umfang berechnet werden sollen.
+            
+            <details>
+            <summary>Lösung anzeigen</summary>
+            <p><code class="language-python">
+import math # Damit math.pi verwendet werden kann, ansonsten statt pi 3.14 verwenden
+
+form = int(input("Gib eine Form ein (1 = Dreieck, 2 = Rechteck, 3 = Kreis): ")) 
+calc = int(input("Fläche (1) oder Umfang (2): "))
+
+if form == 1:
+    if calc == 1:
+        # Logik für Fläche
+    else:
+        # Logik für Umfang 
+elif form == 2:
+    if calc == 1:
+        # Logik für Fläche
+    else:
+        # Logik für Umfang 
+elif form == 3:
+    if calc == 1:
+        # Logik für Fläche
+    else:
+        # Logik für Umfang 
+else:
+    print("Form exestiert nicht!")
+            </code></p>
+            </details>
             <hr>
         </div>
     </main>
